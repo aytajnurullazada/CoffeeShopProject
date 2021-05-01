@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewData["Title"] = "ReserveTable";
+}
+
+<partial name="_Breadcrumb" />
+<!-- reserve_table_section - start
+        ================================================== -->
+<section class="reserve_table_section sec_ptb_120">
+    <div class="container">
+        <div class="reserve_table_form wow fadeInUp" data-wow-delay=".1s">
+            <h2 class="form_title text-center text-uppercase">reserve your table</h2>
+            <form action="#">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <div class="form_item">
+                            <input id="person-value" type="text" name="person-quantity" placeholder="How Many Preson?" value="4 Person">
+                            <label class="form_icon" for="person-value"><i class="fal fa-user"></i></label>
+                        </div>
+                        <div class="form_item">
+                            <input type="date" name="reserve-date">
+                        </div>
+                        <div class="form_item">
+                            <input type="time" name="reserve-time" min="09:00" max="18:00">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn_primary text-uppercase">Book a table</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="decoration_icon">
+                <img src="/images/feature/icon_01.png" alt="icon_not_found">
+                <span class="bg_shape"></span>
+            </div>
+        </div>
+        <div class="reserve_banner_image">
+            <img src="/images/reserve/img_01.jpg" alt="image_not_found">
+        </div>
+    </div>
+</section>
+<!-- reserve_table_section - end
+================================================== -->
