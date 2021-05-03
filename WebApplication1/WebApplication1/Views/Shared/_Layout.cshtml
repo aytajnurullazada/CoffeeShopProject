@@ -61,7 +61,7 @@
 
                         <div class="col-lg-2 col-md-6 col-6">
                             <div class="brand_logo">
-                                <a class="brand_link" href="index_1.html">
+                                <a asp-controller="home" asp-action="index">
                                     <img src="/images/logo/logo_white_1x.png" srcset="/images/logo/logo_white_2x.png 2x" alt="logo_not_found">
                                 </a>
                             </div>
@@ -75,20 +75,16 @@
                                 <div class="main_menu_inner collapse navbar-collapse" id="main_menu_dropdown">
                                     <ul class="main_menu_list ul_li">
                                         <li class="active dropdown">
-                                            <a class="nav-link" href="#" id="home_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <a asp-controller="home" asp-action="index">
                                                 Home
                                             </a>
-                                            <ul class="submenu dropdown-menu" aria-labelledby="home_submenu">
-                                                <li><a href="index_1.html">Home V.1</a></li>
-                                                <li><a href="index_2.html">Home V.2</a></li>
-                                                <li><a href="index_3.html">Home V.3</a></li>
-                                            </ul>
+
                                         </li>
                                         <li class="dropdown">
                                             <a class="nav-link" href="#" id="about_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
                                             <ul class="submenu dropdown-menu" aria-labelledby="about_submenu">
-                                                <li><a href="about.html">About Us</a></li>
-                                                <li><a href="about_2.html">About Me</a></li>
+                                                <li><a asp-controller="about" asp-action="aboutus">About Us</a></li>
+                                                <li><a asp-controller="about" asp-action="aboutme">About Me</a></li>
                                             </ul>
                                         </li>
                                         <li class="dropdown">
@@ -96,8 +92,8 @@
                                                 shop
                                             </a>
                                             <ul class="submenu dropdown-menu" aria-labelledby="portfolio_submenu">
-                                                <li><a href="shop.html">Shop</a></li>
-                                                <li><a href="shop_details.html">Shop Details</a></li>
+                                                <li><a asp-controller="shop" asp-action="index">Shop</a></li>
+                                                <li><a asp-controller="shop" asp-action="shopdetails">Shop Details</a></li>
                                             </ul>
                                         </li>
                                         <li class="dropdown">
@@ -105,19 +101,12 @@
                                                 Pages
                                             </a>
                                             <ul class="submenu dropdown-menu" aria-labelledby="services_submenu">
-                                                <li><a href="menu.html">Recipe Menu</a></li>
-                                                <li><a href="cart.html">Cart</a></li>
-                                                <li class="dropdown">
-                                                    <a href="#" id="checkout_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Checkout</a>
-                                                    <ul class="submenu dropdown-menu" aria-labelledby="checkout_submenu">
-                                                        <li><a href="checkout.html">Checkout Step 1</a></li>
-                                                        <li><a href="checkout_step2.html">Checkout Step 2</a></li>
-                                                        <li><a href="checkout_step3.html">Checkout Step 3</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="faq.html">F.A.Q.</a></li>
-                                                <li><a href="reserve_table.html">Reserve Table</a></li>
-                                                <li><a href="reservation_form.html">Reservation Form</a></li>
+                                                <li><a asp-controller="page" asp-action="recipemenu">Recipe Menu</a></li>
+                                                <li><a asp-controller="page" asp-action="cart">Cart</a></li>
+                                                <li><a asp-controller="page" asp-action="checkout">Checkout</a></li>
+                                                <li><a asp-controller="page" asp-action="faq">F.A.Q.</a></li>
+                                                <li><a asp-controller="page" asp-action="reservetable">Reserve Table</a></li>
+                                                <li><a asp-controller="page" asp-action="reserveform">Reservation Form</a></li>
                                             </ul>
                                         </li>
                                         <li class="dropdown">
@@ -125,13 +114,12 @@
                                                 Blog
                                             </a>
                                             <ul class="submenu dropdown-menu" aria-labelledby="experience_submenu">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="blog_details.html">Blog Details</a></li>
+                                                <li><a asp-controller="blog" asp-action="index">Blog</a></li>
+                                                <li><a asp-controller="blog" asp-action="blogdetails">Blog Details</a></li>
                                             </ul>
                                         </li>
-                                        <li>
-                                            <a class="nav-link" href="contact.html">Contact us</a>
-                                        </li>
+                                        <li><a asp-controller="contact" asp-action="index">Contact</a></li>
+
                                     </ul>
                                 </div>
 
@@ -148,7 +136,7 @@
                                         </button>
                                     </li>
                                     <li>
-                                        <a class="btn btn_primary text-uppercase" href="contact.html">Contact Us</a>
+                                        <a class="btn btn_primary text-uppercase" asp-controller="contact" asp-action="index">Contact Us</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -239,8 +227,8 @@
                     <span>$76.00</span>
                 </div>
                 <ul class="btns_group ul_li">
-                    <li><a href="cart.html" class="btn btn_primary text-uppercase">View Cart</a></li>
-                    <li><a href="checkout.html" class="btn btn_border border_black text-uppercase">Checkout</a></li>
+                    <li><a asp-controller="page" asp-action="cart" class="btn btn_primary text-uppercase">View Cart</a></li>
+                    <li><a asp-controller="page" asp-action="checkout" class="btn btn_border border_black text-uppercase">Checkout</a></li>
                 </ul>
             </div>
             <div class="cart_sidebar_overlay"></div>
