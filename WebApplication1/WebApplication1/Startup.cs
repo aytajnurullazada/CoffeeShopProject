@@ -40,6 +40,7 @@ namespace WebApplication1
             services.AddTransient<IDepartmentRepository, DepartmentRepository>();
 
             services.AddTransient<IRecipeRepository, RecipeRepository>();
+            services.AddTransient<IProductRepository, ProductRepositroy>();
 
 
 

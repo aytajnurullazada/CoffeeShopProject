@@ -1,9 +1,14 @@
 ﻿@model IEnumerable<DepartmentViewModel>
 <ul class="filters-button-group ul_li_center wow fadeInUp" data-wow-delay=".3s">
+    <li>
+        <button class="button text-uppercase" data-filter="*"><span><a style="color: black" href="#0">All</a></span></button>
+
+    </li>
     @foreach (var department in Model)
     {
-        <li><button class="button text-uppercase" data-filter=".@department.Name"><span><a href="#0">@department.Name</a></span></button>
-           
+        <li>
+            <button class="button text-uppercase" data-filter=".@department.Name"><span><a style="color: black" href="#0">@department.Name</a></span></button>
+
         </li>
     }
 </ul>

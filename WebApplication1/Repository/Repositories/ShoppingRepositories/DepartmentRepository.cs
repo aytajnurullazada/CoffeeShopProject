@@ -18,8 +18,7 @@ namespace Repository.Repositories.ShoppingRepositories
         }
         public IEnumerable<Department> GetDepartmentsWithCategory()
         {
-            return _context.Departments.Include("Categories")
-                                        .Where(d => d.Status)
+            return _context.Departments.Where(d => d.Status)
                                         .ToList();
         }
     }

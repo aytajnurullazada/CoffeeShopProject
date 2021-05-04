@@ -12,9 +12,10 @@ namespace WebApplication1.Mapping
     {
         public MappingProfile()
         {
-            CreateMap<Category, CategoryViewModel>();
+            
             CreateMap<Department, DepartmentViewModel>();
             CreateMap<Recipe, RecipeViewModel>();
+            CreateMap<Product, ProductViewModel>();
         }
     }
 }

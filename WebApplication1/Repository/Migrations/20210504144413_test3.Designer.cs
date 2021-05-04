@@ -3,21 +3,62 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Repository.Data;
 
 namespace Repository.Migrations
 {
     [DbContext(typeof(CafenodDbContext))]
-    partial class CafenodDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210504144413_test3")]
+    partial class test3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.5")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("Repository.Models.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AddedBy")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("AddedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("DepartmentId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DepartmentId");
+
+                    b.ToTable("Categories");
+                });
 
             modelBuilder.Entity("Repository.Models.Department", b =>
                 {
@@ -113,6 +154,7 @@ namespace Repository.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<int>("DepartmentId")
+                        .HasMaxLength(100)
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
@@ -255,9 +297,6 @@ namespace Repository.Migrations
 
                     b.Property<DateTime>("AddedDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<int>("DepartmentId")
-                        .HasColumnType("int");
 
                     b.Property<string>("Image")
                         .IsRequired()
@@ -408,6 +447,17 @@ namespace Repository.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("Repository.Models.Category", b =>
+                {
+                    b.HasOne("Repository.Models.Department", "Department")
+                        .WithMany("Categories")
+                        .HasForeignKey("DepartmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Department");
+                });
+
             modelBuilder.Entity("Repository.Models.Department", b =>
                 {
                     b.HasOne("Repository.Models.Recipe", null)
@@ -469,6 +519,11 @@ namespace Repository.Migrations
                         .HasForeignKey("UserId");
 
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("Repository.Models.Department", b =>
+                {
+                    b.Navigation("Categories");
                 });
 
             modelBuilder.Entity("Repository.Models.Product", b =>

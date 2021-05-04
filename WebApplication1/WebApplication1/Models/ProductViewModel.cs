@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 
 namespace WebApplication1.Models
 {
-    public class CategoryViewModel
+    public class ProductViewModel
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public String Name { get; set; }
+        public Decimal Price { get; set; }
+        public string Image { get; set; }
     }
 }

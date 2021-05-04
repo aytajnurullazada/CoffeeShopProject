@@ -10,6 +10,6 @@ namespace Repository.Models
         [Required]
         [MaxLength(100)]
         public string Name { get; set; }
-        public ICollection<Category> Categories { get; set; }
+        
     }
 }

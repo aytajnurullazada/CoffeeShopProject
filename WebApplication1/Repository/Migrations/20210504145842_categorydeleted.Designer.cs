@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Repository.Data;
 
 namespace Repository.Migrations
 {
     [DbContext(typeof(CafenodDbContext))]
-    partial class CafenodDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210504145842_categorydeleted")]
+    partial class categorydeleted
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -113,6 +115,7 @@ namespace Repository.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<int>("DepartmentId")
+                        .HasMaxLength(100)
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
@@ -255,9 +258,6 @@ namespace Repository.Migrations
 
                     b.Property<DateTime>("AddedDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<int>("DepartmentId")
-                        .HasColumnType("int");
 
                     b.Property<string>("Image")
                         .IsRequired()

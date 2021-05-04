@@ -168,3 +168,4 @@ C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\bin\Debug\n
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Menu\Default.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Recipe\Default.cshtml.g.cs
+C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\PopularProduct\Default.cshtml.g.cs

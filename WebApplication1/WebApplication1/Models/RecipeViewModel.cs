@@ -10,7 +10,8 @@ namespace WebApplication1.Models
         public string Title { get; set; }
         public string Text { get; set; }
         public decimal Price { get; set; }
-        public string Image { get; set; }
         public int OrderBy { get; set; }
+        public string Image { get; set; }
+
     }
 }
