@@ -14,6 +14,7 @@ namespace WebApplication1.Mapping
         {
             CreateMap<Category, CategoryViewModel>();
             CreateMap<Department, DepartmentViewModel>();
+            CreateMap<Recipe, RecipeViewModel>();
         }
     }
 }

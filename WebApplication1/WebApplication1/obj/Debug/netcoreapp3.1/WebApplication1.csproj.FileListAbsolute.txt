@@ -153,8 +153,6 @@ C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\n
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\About\AboutUs.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Feature.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Testimonial.cshtml.g.cs
-C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Shop.cshtml.g.cs
-C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_FilterButton.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shop\ShopDetails.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Page\RecipeMenu.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Page\Cart.cshtml.g.cs
@@ -169,3 +167,4 @@ C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\n
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Menu\Default.cshtml.g.cs
+C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Recipe\Default.cshtml.g.cs

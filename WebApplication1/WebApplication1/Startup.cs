@@ -13,6 +13,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Repository.Repositories.ShoppingRepositories;
+using Repository.Repositories.RecipeRepository;
 
 namespace WebApplication1
 {
@@ -37,8 +38,11 @@ namespace WebApplication1
             x => x.MigrationsAssembly("Repository")));
 
             services.AddTransient<IDepartmentRepository, DepartmentRepository>();
-            
-            
+
+            services.AddTransient<IRecipeRepository, RecipeRepository>();
+
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
