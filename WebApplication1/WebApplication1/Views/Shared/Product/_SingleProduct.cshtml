@@ -1,0 +1,28 @@
+﻿@model ProductViewModel
+<div class="shop_card wow fadeInUp" data-wow-delay=".1s">
+    <a class="wishlist_btn" href="#!"><i class="fal fa-heart"></i></a>
+    <div class="share_btns">
+        <button type="button" class="share_btn">
+            <i class="fal fa-share-alt"></i>
+        </button>
+        <ul class="ul_li">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+    </div>
+    <a class="item_image" asp-controller="Shop" asp-action="ShopDetails" asp-route-id="@Model.Id">
+        <img src="/uploads/@Model.Image" alt="image_not_found">
+    </a>
+    <div class="item_content">
+        <h3 class="item_title text-uppercase">
+            <a href="shop_details.html">@Model.Name</a>
+        </h3>
+        <div class="btns_group">
+            <span class="item_price bg_default_brown">$@Model.Price</span>
+            <a class="btn btn_border border_black text-uppercase" href="#!">Add To Cart</a>
+        </div>
+    </div>
+</div>

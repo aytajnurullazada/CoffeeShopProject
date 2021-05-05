@@ -25,5 +25,9 @@ namespace Repository.Repositories.ShoppingRepositories
                                     .ToList();
         }
 
+        public IEnumerable<Product> GetProduct()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
