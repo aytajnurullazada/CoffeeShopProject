@@ -25,9 +25,13 @@ namespace Repository.Repositories.ShoppingRepositories
                                     .ToList();
         }
 
-        public IEnumerable<Product> GetProduct()
+        public IEnumerable<Product> GetProductForSale(int Id)
         {
-            throw new NotImplementedException();
+            return _context.Products.Where(p => p.Status)
+                                    .Where(p=> p.DepartmentId==Id)
+                                    .OrderByDescending(p => p.AddedDate)
+
+                                    .ToList();
         }
     }
 }

@@ -170,3 +170,5 @@ C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\n
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Recipe\Default.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\PopularProduct\Default.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Product\_SingleProduct.cshtml.g.cs
+C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\ProductForSale\Default.cshtml.g.cs
+C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\HeaderBasket\Default.cshtml.g.cs

@@ -14,6 +14,8 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Repository.Repositories.ShoppingRepositories;
 using Repository.Repositories.RecipeRepository;
+using WebApplication1.Libs;
+using Microsoft.AspNetCore.Http;
 
 namespace WebApplication1
 {
@@ -30,6 +32,11 @@ namespace WebApplication1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddMvc(
+                config =>
+                {
+                    config.Filters.Add(new GlobalToken());
+                });
 
             services.AddAutoMapper(typeof(Startup));
 
@@ -41,7 +48,7 @@ namespace WebApplication1
 
             services.AddTransient<IRecipeRepository, RecipeRepository>();
             services.AddTransient<IProductRepository, ProductRepositroy>();
-
+            services.AddTransient<IBasketRepository, BasketRepository>();
 
 
         }

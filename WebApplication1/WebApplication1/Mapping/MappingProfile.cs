@@ -16,6 +16,7 @@ namespace WebApplication1.Mapping
             CreateMap<Department, DepartmentViewModel>();
             CreateMap<Recipe, RecipeViewModel>();
             CreateMap<Product, ProductViewModel>();
+            CreateMap<Basket, BasketViewModel>();
         }
     }
 }

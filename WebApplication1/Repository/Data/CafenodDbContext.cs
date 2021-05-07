@@ -18,7 +18,9 @@ namespace Repository.Data
         public DbSet<ProductReview> productReviews { get; set; }
         public DbSet<Setting> Setting { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Basket> Baskets { get; set; }
         public IEnumerable<SliderItem> SliderItems { get; set; }
         public IEnumerable<object> ShopCollection { get; set; }
+        
     }
 }

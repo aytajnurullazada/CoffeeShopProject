@@ -5,12 +5,11 @@ using System.Threading.Tasks;
 
 namespace WebApplication1.Models
 {
-    public class ProductViewModel
+    public class BasketViewModel
     {
         public int Id { get; set; }
-        public String Name { get; set; }
-        public Decimal Price { get; set; }
-        public string Image { get; set; }
-   
+        public string Token { get; set; }
+        public int Count { get; set; }
+        public ProductViewModel Product { get; set; }
     }
 }

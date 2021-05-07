@@ -1,0 +1,44 @@
+﻿@model IEnumerable<BasketViewModel>
+
+    <li>
+        <button type="button" class="cart_btn">
+            <i class="fal fa-shopping-bag"></i>
+            <small class="cart_counter">@Model.Count()</small>
+        </button>
+    </li>
+<div class="sidebar-menu-wrapper">
+    <div class="cart_sidebar">
+        <button type="button" class="close_btn"><i class="fal fa-times"></i></button>
+        <h2 class="heading_title text-uppercase">Cart Items - <span>@Model.Count()</span></h2>
+
+
+        <div class="cart_items_list">
+            @foreach (var item in Model)
+            {
+
+                <div class="cart_item">
+                    <div class="item_image">
+                        <img src="/uploads/@item.Product.Image" alt="image_not_found">
+                    </div>
+                    <div class="item_content">
+                        <h4 class="item_title">
+                            @item.Product.Name
+                        </h4>
+                        <span class="item_price">$@item.Product.Price</span>
+                        <button type="button" class="remove_btn"><i class="fal fa-times"></i></button>
+                    </div>
+                </div>
+
+            }
+        </div>
+        <div class="total_price text-uppercase">
+            <span>Sub Total:</span>
+            <span>$300</span>
+        </div>
+        <ul class="btns_group ul_li">
+            <li><a asp-controller="page" asp-action="cart" class="btn btn_primary text-uppercase">View Cart</a></li>
+            <li><a asp-controller="page" asp-action="checkout" class="btn btn_border border_black text-uppercase">Checkout</a></li>
+        </ul>
+    </div>
+    <div class="cart_sidebar_overlay"></div>
+</div>
