@@ -28,13 +28,24 @@ namespace Repository.Repositories.ShoppingRepositories
 
         }
 
+        public Basket GetBasketById(int id)
+        {
+            return _context.Baskets.Find(id);
+        }
+
         public IEnumerable<Basket> GetBasketByToken(string token)
         {
             return _context.Baskets.Include("Product")
-                                   .Where(b => b.Token == token)
+                                   .Where(b => b.Token == token && b.Status)
                                    .ToList();
         }
 
-        
+        public void RemoveBasket(Basket basket)
+        {
+            _context.Baskets.Remove(basket);
+            _context.SaveChanges();
+
+
+        }
     }
 }

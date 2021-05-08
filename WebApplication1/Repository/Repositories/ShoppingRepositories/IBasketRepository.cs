@@ -9,5 +9,7 @@ namespace Repository.Repositories.ShoppingRepositories
     {
         IEnumerable<Basket> GetBasketByToken(string token);
         Basket CreateBasket(Basket basket);
+        Basket GetBasketById(int id);
+        void RemoveBasket(Basket basket);
     }
 }

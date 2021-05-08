@@ -23,7 +23,7 @@ namespace WebApplication1.ViewComponents
         }
         public IViewComponentResult Invoke()
         {
-            var products = _productRepository.GetPopularProduct(8);
+            var products = _productRepository.GetPopularProduct(6);
             var model = _mapper.Map<IEnumerable<Product>, IEnumerable<ProductViewModel>>(products);
             return View(model);
         }

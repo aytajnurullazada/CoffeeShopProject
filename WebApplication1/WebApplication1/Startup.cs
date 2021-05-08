@@ -1,21 +1,14 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Repository.Data;
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
 using Repository.Repositories.ShoppingRepositories;
 using Repository.Repositories.RecipeRepository;
 using WebApplication1.Libs;
-using Microsoft.AspNetCore.Http;
 
 namespace WebApplication1
 {

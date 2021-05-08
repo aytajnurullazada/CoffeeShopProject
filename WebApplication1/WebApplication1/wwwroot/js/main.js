@@ -399,4 +399,17 @@
   // quantity - end
   // --------------------------------------------------
 
+    //Basket
+    $(document).on("click", ".remove-header-basket-item", function (e) {
+        e.preventDefault();
+        let elem = $(this);
+        $.ajax({
+            url: $(this).attr("href"),
+            type: "get",
+            success: function (res) {
+                elem.parent().remove();
+            }
+        });
+    });
+    
 })(jQuery);

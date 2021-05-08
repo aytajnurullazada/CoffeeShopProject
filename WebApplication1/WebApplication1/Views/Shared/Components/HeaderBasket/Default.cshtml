@@ -1,5 +1,7 @@
 ﻿@model IEnumerable<BasketViewModel>
-
+@{
+    decimal total = 0M;
+}
     <li>
         <button type="button" class="cart_btn">
             <i class="fal fa-shopping-bag"></i>
@@ -18,27 +20,38 @@
 
                 <div class="cart_item">
                     <div class="item_image">
-                        <img src="/uploads/@item.Product.Image" alt="image_not_found">
+                        <img src="/uploads/@item.Product.Image" width="50" height="50" alt="image_not_found">
                     </div>
                     <div class="item_content">
                         <h4 class="item_title">
+                            @item.Count x
                             @item.Product.Name
                         </h4>
                         <span class="item_price">$@item.Product.Price</span>
-                        <button type="button" class="remove_btn"><i class="fal fa-times"></i></button>
+                        <button type="button" class="remove_btn">
+                            <a asp-controller="cart" asp-action="remove" asp-route-id="@item.Id" class="action remove-header-basket-item"> 
+                                <i class="fal fa-times"></i>
+                            </a>
+                        </button>
                     </div>
                 </div>
 
+
+                decimal Price = item.Product.Price;
+                total += (Price * item.Count);
+
             }
         </div>
-        <div class="total_price text-uppercase">
-            <span>Sub Total:</span>
-            <span>$300</span>
+
+            <div class="total_price text-uppercase">
+                <span>Sub Total:</span>
+                <span>$@total.ToString("#.00")</span>
+            </div>
+
+            <ul class="btns_group ul_li">
+                <li><a asp-controller="cart" asp-action="index" class="btn btn_primary text-uppercase">View Cart</a></li>
+                <li><a asp-controller="page" asp-action="checkout" class="btn btn_border border_black text-uppercase">Checkout</a></li>
+            </ul>
         </div>
-        <ul class="btns_group ul_li">
-            <li><a asp-controller="page" asp-action="cart" class="btn btn_primary text-uppercase">View Cart</a></li>
-            <li><a asp-controller="page" asp-action="checkout" class="btn btn_border border_black text-uppercase">Checkout</a></li>
-        </ul>
-    </div>
     <div class="cart_sidebar_overlay"></div>
 </div>
