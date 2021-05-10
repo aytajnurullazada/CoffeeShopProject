@@ -1,6 +1,6 @@
-﻿
+﻿@model ProductViewModel
 @{
-    ViewData["Title"] = "ShopDetails";
+    ViewData["Title"] = "Index";
 }
 
 <partial name="_Breadcrumb" />
@@ -8,128 +8,87 @@
  ================================================== -->
 <section class="details_section shop_details sec_ptb_120 bg_default_gray">
     <div class="container">
-        
-        <div class="row justify-content-lg-between justify-content-md-center justify-content-sm-center">
-            <div class="col-lg-6 col-md-7">
-                <div class="details_image_wrap wow fadeInUp" data-wow-delay=".1s">
-                    <div class="details_image_carousel">
-                        <div class="slider_item">
-                            <img src="assets/images/shop/img_01.png" alt="image_not_found">
-                        </div>
-                        <div class="slider_item">
-                            <img src="assets/images/shop/img_02.png" alt="image_not_found">
-                        </div>
-                        <div class="slider_item">
-                            <img src="assets/images/shop/img_03.png" alt="image_not_found">
-                        </div>
-                        <div class="slider_item">
-                            <img src="assets/images/shop/img_04.png" alt="image_not_found">
-                        </div>
-                        <div class="slider_item">
-                            <img src="assets/images/shop/img_05.png" alt="image_not_found">
-                        </div>
-                        <div class="slider_item">
-                            <img src="assets/images/shop/img_06.png" alt="image_not_found">
-                        </div>
-                        <div class="slider_item">
-                            <img src="assets/images/shop/img_02.png" alt="image_not_found">
-                        </div>
-                        <div class="slider_item">
-                            <img src="assets/images/shop/img_04.png" alt="image_not_found">
-                        </div>
-                        <div class="slider_item">
-                            <img src="assets/images/shop/img_06.png" alt="image_not_found">
-                        </div>
-                    </div>
 
-                    <div class="details_image_carousel_nav">
-                        <div class="slider_item">
-                            <img src="assets/images/shop/img_01.png" alt="image_not_found">
-                        </div>
-                        <div class="slider_item">
-                            <img src="assets/images/shop/img_02.png" alt="image_not_found">
-                        </div>
-                        <div class="slider_item">
-                            <img src="assets/images/shop/img_03.png" alt="image_not_found">
-                        </div>
-                        <div class="slider_item">
-                            <img src="assets/images/shop/img_04.png" alt="image_not_found">
-                        </div>
-                        <div class="slider_item">
-                            <img src="assets/images/shop/img_05.png" alt="image_not_found">
-                        </div>
-                        <div class="slider_item">
-                            <img src="assets/images/shop/img_06.png" alt="image_not_found">
-                        </div>
-                        <div class="slider_item">
-                            <img src="assets/images/shop/img_02.png" alt="image_not_found">
-                        </div>
-                        <div class="slider_item">
-                            <img src="assets/images/shop/img_04.png" alt="image_not_found">
-                        </div>
-                        <div class="slider_item">
-                            <img src="assets/images/shop/img_06.png" alt="image_not_found">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-md-7">
-                <div class="details_content wow fadeInUp" data-wow-delay=".2s">
-                    <div class="details_flex_title">
-                        <h2 class="details_title text-uppercase">Americano Coffee Beans</h2>
-                        <div class="details_review">
-                            <ul class="rating_star ul_li">
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="far fa-star"></i></li>
-                            </ul>
-                            <span class="review_text">04 - Customar Review</span>
-                        </div>
-                    </div>
-                    <p>
-                        The coffee is brewed by first roasting the green coffee beans over hot coals in  brazier.Once the beans are roasted each participant is given an opportunity to sample The coffee is brewed by first roasting the green coffee beans over hot coals in a brazier.
-                    </p>
-                    <div class="details_price">
-                        <strong class="price_text">$25.00</strong>
-                        <span class="in_stuck"><i class="fal fa-check"></i> In stock</span>
-                    </div>
-                    <ul class="details_item_color ul_li">
-                        <li class="bg_brown"><input type="radio" name="item_color"></li>
-                        <li class="bg_browndark"><input type="radio" name="item_color" checked></li>
-                        <li class="bg_brownlight"><input type="radio" name="item_color"></li>
-                    </ul>
-                    <ul class="btns_group ul_li">
-                        <li>
-                            <div class="quantity_input quantity_boxed">
-                                <h4 class="quantity_title text-uppercase">Quantity</h4>
-                                <form action="#">
-                                    <button type="button" class="input_number_decrement">–</button>
-                                    <input class="input_number" type="text" value="2">
-                                    <button type="button" class="input_number_increment">+</button>
-                                </form>
+       
+            <div class="row justify-content-lg-between justify-content-md-center justify-content-sm-center">
+                <div class="col-lg-6 col-md-7">
+                    <div class="details_image_wrap wow fadeInUp" data-wow-delay=".1s">
+                        
+                            <div class="slider_item">
+                                <img src="/uploads/@Model.Image" alt="image_not_found">
                             </div>
-                        </li>
-                        <li><a class="btn btn_secondary text-uppercase" href="#!">Add To Cart</a></li>
-                    </ul>
-                    <div class="details_wishlist_btn">
-                        <a href="#!"><i class="fas fa-heart mr-1"></i> Add to watch list</a>
                     </div>
-                    <div class="details_share_links">
-                        <h4 class="list_title"><i class="fas fa-share mr-1"></i> Share</h4>
-                        <ul class="social_links social_icons ul_li">
-                            <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="#!"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#!"><i class="fab fa-behance"></i></a></li>
+                </div>
+
+                <div class="col-lg-6 col-md-7">
+                    <div class="details_content wow fadeInUp" data-wow-delay=".2s">
+                        <div class="details_flex_title">
+                            <h2 class="details_title text-uppercase">@Model.Name </h2>
+                            <div class="details_review">
+                                <ul class="rating_star ul_li">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="far fa-star"></i></li>
+                                </ul>
+                                <span class="review_text">04 - Customar Review</span>
+                            </div>
+                        </div>
+                        <p>
+                            @Model.Description
+                        </p>
+                        <div class="details_price">
+                            <strong class="price_text">@Model.Price</strong>
+                            
+                            @if (Model.Count != 0)
+                              {
+                                <span class="in_stuck"><i class="fal fa-check"></i> In stock</span>
+                              }
+                                else
+                                    {
+                                    <span class="in_stuck"><i class="far fa-times-circle"></i> Out of stock</span>
+                                    }
+                            
+                        </div>
+                        <ul class="details_item_color ul_li">
+                            <li class="bg_brown"><input type="radio" name="item_color"></li>
+                            <li class="bg_browndark"><input type="radio" name="item_color" checked></li>
+                            <li class="bg_brownlight"><input type="radio" name="item_color"></li>
                         </ul>
+                        <ul class="btns_group ul_li">
+                            <li>
+                                <div class="quantity_input quantity_boxed">
+                                    <h4 class="quantity_title text-uppercase">Quantity</h4>
+                                    <form action="#">
+                                        <button type="button" class="input_number_decrement">–</button>
+                                        <input class="input_number" type="text" value="2">
+                                        <button type="button" class="input_number_increment">+</button>
+                                    </form>
+                                </div>
+                            </li>
+                            <li><a class="btn btn_secondary text-uppercase" href="#!">Add To Cart</a></li>
+                        </ul>
+                        <div class="details_wishlist_btn">
+                            <a href="#!"><i class="fas fa-heart mr-1"></i> Add to watch list</a>
+                        </div>
+                        <div class="details_share_links">
+                            <h4 class="list_title"><i class="fas fa-share mr-1"></i> Share</h4>
+                            <ul class="social_links social_icons ul_li">
+                                <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#!"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="#!"><i class="fab fa-behance"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        }
+
+
+
 
         <div class="product_description_wrap wow fadeInUp" data-wow-delay=".3s">
             <ul class="tabs_nav ul_li nav" role="tablist">

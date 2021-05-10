@@ -10,6 +10,7 @@ namespace Repository.Repositories.ShoppingRepositories
     {
         IEnumerable<Product> GetPopularProduct(int limit);
         IEnumerable<Product> GetProductForSale(int Id);
+        Product GetProductDetails(int Id);
         
     }
 }

@@ -25,12 +25,19 @@ namespace Repository.Repositories.ShoppingRepositories
                                     .ToList();
         }
 
+        public Product GetProductDetails(int Id)
+        {
+            return _context.Products
+                           .FirstOrDefault(p => p.Status && p.Id == Id);
+                                    
+        }
+
         public IEnumerable<Product> GetProductForSale(int Id)
         {
-            return _context.Products.Where(p => p.Status)
+            return _context.Products.Include("Depertment")
+                                    .Where(p => p.Status)
                                     .Where(p=> p.DepartmentId==Id)
                                     .OrderByDescending(p => p.AddedDate)
-
                                     .ToList();
         }
     }

@@ -11,6 +11,9 @@ namespace WebApplication1.Models
         public String Name { get; set; }
         public Decimal Price { get; set; }
         public string Image { get; set; }
-   
+        public byte StarCount { get; set; }
+        public string Description { get; set; }
+        public int Count { get; set; }
+
     }
 }

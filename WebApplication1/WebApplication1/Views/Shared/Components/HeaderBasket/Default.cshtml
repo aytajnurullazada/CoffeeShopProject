@@ -17,25 +17,25 @@
         <div class="cart_items_list">
             @foreach (var item in Model)
             {
-
-                <div class="cart_item">
-                    <div class="item_image">
+                <a asp-controller="products" asp-action="index" asp-route-id="@item.Product.Id"></a>
+                <div class="cart_item justify-content-between">
+                    @*<div class="item_image">*@
                         <img src="/uploads/@item.Product.Image" width="50" height="50" alt="image_not_found">
-                    </div>
-                    <div class="item_content">
+                    @*</div>*@
+                    @*<div class="item_content">*@
                         <h4 class="item_title">
                             @item.Count x
                             @item.Product.Name
                         </h4>
                         <span class="item_price">$@item.Product.Price</span>
-                        <button type="button" class="remove_btn">
-                            <a asp-controller="cart" asp-action="remove" asp-route-id="@item.Id" class="action remove-header-basket-item"> 
-                                <i class="fal fa-times"></i>
-                            </a>
-                        </button>
-                    </div>
-                </div>
 
+                        <a asp-controller="cart" asp-action="remove" asp-route-id="@item.Id" class="action remove-header-basket-item">
+                            <button type="button" class="remove_btn">
+                                <i class="fal fa-times"></i>
+                            </button>
+                        </a>
+                    @*</div>*@
+                </div>
 
                 decimal Price = item.Product.Price;
                 total += (Price * item.Count);

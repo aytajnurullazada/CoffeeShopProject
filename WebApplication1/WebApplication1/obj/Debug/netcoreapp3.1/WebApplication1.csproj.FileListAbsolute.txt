@@ -153,7 +153,6 @@ C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\n
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\About\AboutUs.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Feature.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Testimonial.cshtml.g.cs
-C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shop\ShopDetails.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Page\RecipeMenu.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Page\Cart.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Page\Checkout.cshtml.g.cs
@@ -173,3 +172,4 @@ C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\n
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\ProductForSale\Default.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\HeaderBasket\Default.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs
+C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Products\Index.cshtml.g.cs

@@ -17,6 +17,8 @@ namespace Repository.Models
         [Required]
         [MaxLength(500)]
         public string Description { get; set; }
+        [Required]
+        public int Count { get; set; }
         public byte StarCount { get; set; }
         public Department Department { get; set; }
         public string Image { get; set; }
