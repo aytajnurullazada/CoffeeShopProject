@@ -40,5 +40,13 @@ namespace Repository.Repositories.ShoppingRepositories
                                     .OrderByDescending(p => p.AddedDate)
                                     .ToList();
         }
+
+        public IEnumerable<Product> GetRelatedProduct(int limit)
+        {
+            return _context.Products.Where(p => p.Status)
+                                    .OrderByDescending(p => p.AddedDate)
+                                    .Take(limit)
+                                    .ToList();
+        }
     }
 }

@@ -1,0 +1,18 @@
+﻿@model IEnumerable<ProductViewModel>
+    @*
+        For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+    *@
+    <div class="related_products">
+        <h4 class="area_title text-uppercase mb-0 wow fadeInUp" data-wow-delay=".1s">Related Product</h4>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <partial name="Product/_SingleProduct" model="item" />
+            </div>
+            }
+
+
+
+        </div>
+    </div>
