@@ -22,9 +22,11 @@ namespace WebApplication1.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            Request.Cookies.TryGetValue("token", out string token);
+            var basketItems = _basketRepository.GetBasketByToken(token);
+            var model = _mapper.Map<IEnumerable<Basket>, IEnumerable<BasketViewModel>>(basketItems);
+            return View(model);
         }
-
         public IActionResult Remove(int id)
         {
             var basket = _basketRepository.GetBasketById(id);
