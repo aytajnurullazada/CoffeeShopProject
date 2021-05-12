@@ -5,13 +5,10 @@ using System.Text;
 
 namespace Repository.Models
 {
-   public class ProductPhoto : BaseEntity
+   public class Category : BaseEntity
     {
-        public int ProductId { get; set; }
         [Required]
         [MaxLength(100)]
-        public string Image { get; set; }
-        public Product Product { get; set; }
-
+        public string Name { get; set; }
     }
 }

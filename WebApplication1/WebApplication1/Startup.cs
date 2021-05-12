@@ -38,7 +38,6 @@ namespace WebApplication1
             x => x.MigrationsAssembly("Repository")));
 
             services.AddTransient<IDepartmentRepository, DepartmentRepository>();
-
             services.AddTransient<IRecipeRepository, RecipeRepository>();
             services.AddTransient<IProductRepository, ProductRepositroy>();
             services.AddTransient<IBasketRepository, BasketRepository>();

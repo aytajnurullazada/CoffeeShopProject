@@ -4,10 +4,11 @@
         <button class="button text-uppercase" data-filter="*"><span><a style="color: black" href="#0">All</a></span></button>
 
     </li>
+
     @foreach (var department in Model)
     {
         <li>
-            <button class="button text-uppercase" data-filter=""><span><a style="color: black" href="#0">@department.Name</a></span></button>
+            <button class="button text-uppercase" data-filter=".@department.Id"><span><a style="color: black">@department.Name</a></span></button>
 
         </li>
     }

@@ -173,4 +173,3 @@ C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\n
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Products\Index.cshtml.g.cs
 C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\RelatedProduct\Default.cshtml.g.cs
-C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\ProductForSale\Default.cshtml.g.cs

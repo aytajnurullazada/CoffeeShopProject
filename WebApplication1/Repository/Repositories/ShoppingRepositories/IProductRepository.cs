@@ -9,7 +9,7 @@ namespace Repository.Repositories.ShoppingRepositories
     public interface IProductRepository
     {
         IEnumerable<Product> GetPopularProduct(int limit);
-        IEnumerable<Product> GetProductForSale(int Id);
+        IEnumerable<Product> GetProductForSale();
         Product GetProductDetails(int Id);
         IEnumerable<Product> GetRelatedProduct(int limit);
         

@@ -32,11 +32,10 @@ namespace Repository.Repositories.ShoppingRepositories
                                     
         }
 
-        public IEnumerable<Product> GetProductForSale(int Id)
+        public IEnumerable<Product> GetProductForSale()
         {
-            return _context.Products.Include("Depertment")
+            return _context.Products.Include("Department")
                                     .Where(p => p.Status)
-                                    .Where(p=> p.DepartmentId==Id)
                                     .OrderByDescending(p => p.AddedDate)
                                     .ToList();
         }

@@ -14,6 +14,7 @@ namespace WebApplication1.Models
         public byte StarCount { get; set; }
         public string Description { get; set; }
         public int Count { get; set; }
+        public int DepartmentId { get; set; }
 
     }
 }

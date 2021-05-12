@@ -1,7 +1,62 @@
-﻿
+﻿@model IEnumerable<ProductViewModel>
 @{
     ViewData["Title"] = "Index";
 }
 
 <partial name="_Breadcrumb" />
-<vc:product-for-sale></vc:product-for-sale>
+<section class="shop_section sec_ptb_120 bg_default_gray">
+    <div class="container">
+        <vc:menu></vc:menu>
+
+        <div class="shop_filter_bar">
+            <div class="row">
+                <div class="col-lg-6">
+                    <form action="#">
+                        <div class="pricing_range wow fadeInUp" data-wow-delay=".2s">
+                            <h4 class="item_title text-uppercase">Price range</h4>
+                            <div class="price-range-area">
+                                <div id="slider-range" class="slider-range"></div>
+                                <div class="price-text d-flex align-items-center">
+                                    <span>Price:</span>
+                                    <input type="text" id="amount" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="shop_filter_tags wow fadeInUp" data-wow-delay=".1s">
+                        <h4 class="item_title text-uppercase">Popular tag</h4>
+                        <ul class="ul_li">
+                            <li><a href="#!">New</a></li>
+                            <li><a href="#!">Top</a></li>
+                            <li><a href="#!">Sale</a></li>
+                            <li><a href="#!">Coffee</a></li>
+                            <li><a href="#!">Beans</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="shop_filter_grid grid wow fadeInUp" data-wow-delay=".3s">
+
+            @foreach (var item in Model)
+            {
+                <div class="element-item @item.DepartmentId " data-category="coffee">
+                    <partial name="Product/_SingleProduct" model="item" />
+                </div>
+            }
+
+        </div>
+
+        <ul class="pagination_nav ul_li_center">
+            <li><a href="#!"><i class="fal fa-angle-double-left"></i></a></li>
+            <li class="active"><a href="#!">1</a></li>
+            <li><a href="#!">2</a></li>
+            <li><a href="#!">3</a></li>
+            <li><a href="#!"><i class="fal fa-angle-double-right"></i></a></li>
+        </ul>
+    </div>
+</section>
