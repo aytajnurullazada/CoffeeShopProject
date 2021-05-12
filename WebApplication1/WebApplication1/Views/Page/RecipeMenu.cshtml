@@ -3,15 +3,42 @@
     ViewData["Title"] = "RecipeMenu";
 }
 
-<partial name="_Breadcrumb" />
-
+<!-- breadcrumb_section - start
+     ================================================== -->
+<section class="breadcrumb_section text-uppercase" style="background-image: url(/images/breadcrumb/breadcrumb_bg_01.jpg);">
+    <div class="container">
+        <h1 class="page_title text-white wow fadeInUp" data-wow-delay=".1s">Our Menu</h1>
+        <ul class="breadcrumb_nav ul_li wow fadeInUp" data-wow-delay=".2s">
+            <li><a href="index_1.html"><i class="fas fa-home"></i> Home</a></li>
+            <li>Our Menu</li>
+        </ul>
+    </div>
+    <div class="breadcrumb_icon_wrap">
+        <div class="container">
+            <div class="breadcrumb_icon wow fadeInUp" data-wow-delay=".3s">
+                <img src="/images/feature/icon_01.png" alt="icon_not_found">
+                <span class="bg_shape"></span>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- breadcrumb_section - end
+================================================== -->
+<!-- recipe_menu_section - start
+================================================== -->
 <section class="recipe_menu_section sec_ptb_120 bg_gray deco_wrap">
     <div class="container">
+       <vc:menu-category></vc:menu-category>
 
-        <partial name="_FilterButton" />
-
-        <partial name="_Recipe" />
+       <vc:cafe-menu></vc:cafe-menu>
     </div>
 
+    <div class="deco_item shape_1">
+        <img src="/images/menu/shape_01.png" alt="image_not_found">
+    </div>
+    <div class="deco_item shape_2">
+        <img src="/images/menu/shape_02.png" alt="image_not_found">
+    </div>
 </section>
-
+<!-- recipe_menu_section - end
+================================================== -->

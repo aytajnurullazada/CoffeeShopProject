@@ -7,8 +7,9 @@ using Microsoft.Extensions.Hosting;
 using Repository.Data;
 using AutoMapper;
 using Repository.Repositories.ShoppingRepositories;
-using Repository.Repositories.RecipeRepository;
+
 using WebApplication1.Libs;
+using Repository.Repositories.MenuRepositories;
 
 namespace WebApplication1
 {
@@ -38,7 +39,8 @@ namespace WebApplication1
             x => x.MigrationsAssembly("Repository")));
 
             services.AddTransient<IDepartmentRepository, DepartmentRepository>();
-            services.AddTransient<IRecipeRepository, RecipeRepository>();
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<IMenuRepository, MenuRepository>();
             services.AddTransient<IProductRepository, ProductRepositroy>();
             services.AddTransient<IBasketRepository, BasketRepository>();
 

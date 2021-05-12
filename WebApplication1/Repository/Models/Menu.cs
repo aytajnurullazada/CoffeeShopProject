@@ -5,10 +5,8 @@ using System.Text;
 
 namespace Repository.Models
 {
-    public class Recipe:BaseEntity
+   public class Menu : BaseEntity
     {
-        
-
         [Required]
         [MaxLength(50)]
         public string Title { get; set; }
@@ -20,7 +18,7 @@ namespace Repository.Models
         [Required]
         public string Image { get; set; }
         public int OrderBy { get; set; }
-        public int CategoryId { get; set; }
         public Category Category { get; set; }
+        public int CategoryId { get; set; }
     }
 }

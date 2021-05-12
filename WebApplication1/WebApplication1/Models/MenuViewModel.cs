@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 
 namespace WebApplication1.Models
 {
-    public class RecipeViewModel
+    public class MenuViewModel
     {
         public string Title { get; set; }
         public string Text { get; set; }
         public decimal Price { get; set; }
-        public int OrderBy { get; set; }
         public string Image { get; set; }
-
+        public int CategoryId { get; set; }
+        public CategoryViewModel Category { get; set; }
     }
 }

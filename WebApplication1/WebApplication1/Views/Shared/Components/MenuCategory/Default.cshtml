@@ -1,0 +1,18 @@
+﻿@model IEnumerable<CategoryViewModel>
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<ul class="filters-button-group ul_li_center wow fadeInUp" data-wow-delay=".3s">
+    <li>
+        <button class="button text-uppercase" data-filter="*"><span><a style="color: black" href="#0">All</a></span></button>
+
+    </li>
+
+    @foreach (var item in Model)
+    {
+    <li>
+    <button class="button text-uppercase" data-filter=".@item.Id"><span><a style="color: black">@item.Name</a></span></button>
+
+    </li>
+    }
+</ul>
