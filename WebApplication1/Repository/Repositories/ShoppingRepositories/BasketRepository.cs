@@ -30,7 +30,7 @@ namespace Repository.Repositories.ShoppingRepositories
 
             _context.Baskets.Add(basket);
             _context.SaveChanges();
-            return basket;
+            return _context.Baskets.FirstOrDefault(b => b.Status);
 
         }
 

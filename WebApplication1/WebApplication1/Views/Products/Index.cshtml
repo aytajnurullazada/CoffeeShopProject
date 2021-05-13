@@ -62,12 +62,12 @@
                                     <h4 class="quantity_title text-uppercase">Quantity</h4>
                                     <form action="#">
                                         <button type="button" class="input_number_decrement">–</button>
-                                        <input class="input_number" type="text" value="2">
+                                        <input class="input_number" type="text" value="1">
                                         <button type="button" class="input_number_increment">+</button>
                                     </form>
                                 </div>
                             </li>
-                            <li><a class="btn btn_secondary text-uppercase" href="#!">Add To Cart</a></li>
+                            <li><a class="btn btn_secondary text-uppercase add-to-basket" asp-controller="cart" asp-action="add" asp-route-id="@Model.Id">Add To Cart</a></li>
                         </ul>
                         <div class="details_wishlist_btn">
                             <a href="#!"><i class="fas fa-heart mr-1"></i> Add to watch list</a>

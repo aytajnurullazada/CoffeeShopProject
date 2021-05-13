@@ -67,7 +67,8 @@ namespace WebApplication1.Controllers
                     Token = token,
                     Count = 1,
                     AddedBy = "System",
-                    ModifiedBy = "System"
+                    ModifiedBy = "System",
+                    Status = true
                 };
                 _basketRepository.CreateBasket(basket);
             }
