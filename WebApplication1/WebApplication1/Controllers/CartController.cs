@@ -55,5 +55,40 @@ namespace WebApplication1.Controllers
 
 
         }
+        public IActionResult Add(int id)
+        {
+            Request.Cookies.TryGetValue("token", out string token);
+            var basketItem = _basketRepository.GetBasketProductAndToken(id, token);
+            if(basketItem == null)
+            {
+                Basket basket = new Basket
+                {
+                    ProductId = id,
+                    Token = token,
+                    Count = 1,
+                    AddedBy = "System",
+                    ModifiedBy = "System"
+                };
+                _basketRepository.CreateBasket(basket);
+            }
+            else
+            {
+                _basketRepository.ChangeCount(basketItem, basketItem.Count+1);
+            }
+            var basketItems = _basketRepository.GetBasketByToken(token);
+
+            var basketModel = _mapper.Map<IEnumerable<Basket>, IEnumerable<BasketViewModel>>(basketItems);
+            var total = 0M;
+            foreach (var item in basketModel)
+            {
+                var price = item.Product.Price;
+                total += (price * item.Count);
+            }
+            return Ok(new
+            {
+                count = basketItems.Count(),
+                total = total.ToString("#.00")
+            });
+        }
     }
 }

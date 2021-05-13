@@ -11,5 +11,7 @@ namespace Repository.Repositories.ShoppingRepositories
         Basket CreateBasket(Basket basket);
         Basket GetBasketById(int id);
         void RemoveBasket(Basket basket);
+        Basket GetBasketProductAndToken(int ProductId, string token);
+        void ChangeCount(Basket basketItem, int count);
     }
 }

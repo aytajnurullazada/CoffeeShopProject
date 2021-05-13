@@ -18,23 +18,27 @@
             @foreach (var item in Model)
             {
                 <a asp-controller="products" asp-action="index" asp-route-id="@item.Product.Id"></a>
-                <div class="cart_item justify-content-between">
-                    @*<div class="item_image">*@
-                        <img src="/uploads/@item.Product.Image" width="50" height="50" alt="image_not_found">
-                    @*</div>*@
-                    @*<div class="item_content">*@
-                        <h4 class="item_title">
-                            @item.Count <i class="fal fa-times"></i>
-                            @item.Product.Name
-                        </h4>
-                        <span class="item_price">$@item.Product.Price</span>
+                <div class="cart_item cartitem">
+                    
+                        <div class="item_image">
+                            <img src="/uploads/@item.Product.Image" width="50" height="50" alt="image_not_found">
+                        </div>
+                        <div class="item_content">
+                            <h4 class="item_title">
+                                @item.Count <i class="fal fa-times"></i>
+                                @item.Product.Name
+                            </h4>
+                            <span class="item_price">$@item.Product.Price</span>
 
-                        <a asp-controller="cart" asp-action="remove" asp-route-id="@item.Id" class="action remove-header-basket-item">
-                            <button type="button" class="remove_btn">
-                                <i class="fal fa-times"></i>
-                            </button>
-                        </a>
-                    @*</div>*@
+                            <span>
+                                <a asp-controller="cart" asp-action="remove" asp-route-id="@item.Id" class="action remove-header-basket-item">
+                                    <button type="button" class="remove_btn">
+                                        <i class="fal fa-times"></i>
+                                    </button>
+                                </a>
+                            </span>
+                        </div>
+                    
                 </div>
 
                 decimal Price = item.Product.Price;
@@ -45,7 +49,7 @@
 
             <div class="total_price text-uppercase">
                 <span>Sub Total:</span>
-                <span>$@total.ToString("#.00")</span>
+                <span class="span-price">$@total.ToString("#.00")</span>
             </div>
 
             <ul class="btns_group ul_li">

@@ -17,6 +17,12 @@ namespace Repository.Repositories.ShoppingRepositories
             _context = context;
         }
 
+        public void ChangeCount(Basket basketItem, int count)
+        {
+            basketItem.Count = count;
+            _context.SaveChanges();
+        }
+
         public Basket CreateBasket(Basket basket)
         {
             basket.AddedDate = DateTime.Now;
@@ -38,6 +44,11 @@ namespace Repository.Repositories.ShoppingRepositories
             return _context.Baskets.Include("Product")
                                    .Where(b => b.Token == token && b.Status)
                                    .ToList();
+        }
+
+        public Basket GetBasketProductAndToken(int ProductId, string token)
+        {
+            return _context.Baskets.SingleOrDefault(b => b.ProductId == ProductId && b.Token == token);
         }
 
         public void RemoveBasket(Basket basket)
