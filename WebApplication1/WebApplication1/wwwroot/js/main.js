@@ -426,7 +426,10 @@
                 url: $(this).attr("href"),
                 type: "get",
                 success: function (res) {
-                    $(".cartitem").html(res)
+                    //$(".cartitem").html(res)
+                    $(".heading_title span").text(res.count);
+                    $(".cart_btn .cart_counter").text(res.count);
+
                 }
             });
         });

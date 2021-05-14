@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Repository.Data;
 
 namespace Repository.Migrations
 {
     [DbContext(typeof(CafenodDbContext))]
-    partial class CafenodDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210514015442_ReserveTableAndFormAdded")]
+    partial class ReserveTableAndFormAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -112,9 +114,6 @@ namespace Repository.Migrations
                     b.Property<DateTime>("AddedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("BasketId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -150,8 +149,6 @@ namespace Repository.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("BasketId");
 
                     b.ToTable("Checkouts");
                 });
@@ -448,15 +445,6 @@ namespace Repository.Migrations
                         .IsRequired();
 
                     b.Navigation("Product");
-                });
-
-            modelBuilder.Entity("Repository.Models.Checkout", b =>
-                {
-                    b.HasOne("Repository.Models.Basket", "Basket")
-                        .WithMany()
-                        .HasForeignKey("BasketId");
-
-                    b.Navigation("Basket");
                 });
 
             modelBuilder.Entity("Repository.Models.Menu", b =>

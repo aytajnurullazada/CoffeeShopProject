@@ -91,5 +91,13 @@ namespace WebApplication1.Controllers
                 total = total.ToString("#.00")
             });
         }
+        public IActionResult Checkout(int id)
+        {
+            var basket = _basketRepository.GetBasketById(id);
+            if (basket == null) return NotFound();
+            
+            return View();
+        }
+
     }
 }

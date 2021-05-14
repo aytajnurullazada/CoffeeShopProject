@@ -74,11 +74,10 @@
                                 </button>
                                 <div class="main_menu_inner collapse navbar-collapse" id="main_menu_dropdown">
                                     <ul class="main_menu_list ul_li">
-                                        <li class="active dropdown">
+                                        <li class="dropdown">
                                             <a asp-controller="home" asp-action="index">
                                                 Home
                                             </a>
-
                                         </li>
                                         <li class="dropdown">
                                             <a class="nav-link" href="#" id="about_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
@@ -87,15 +86,8 @@
                                                 <li><a asp-controller="about" asp-action="aboutme">About Me</a></li>
                                             </ul>
                                         </li>
-                                        <li class="dropdown">
-                                            <a class="nav-link" href="#" id="portfolio_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                shop
-                                            </a>
-                                            <ul class="submenu dropdown-menu" aria-labelledby="portfolio_submenu">
                                                 <li><a asp-controller="shop" asp-action="index">Shop</a></li>
-                                                <li><a asp-controller="products" asp-action="index">Shop Details</a></li>
-                                            </ul>
-                                        </li>
+                                                
                                         <li class="dropdown">
                                             <a class="nav-link" href="#" id="services_submenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Pages

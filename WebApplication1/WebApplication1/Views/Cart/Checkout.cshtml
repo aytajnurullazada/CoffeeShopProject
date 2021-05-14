@@ -1,4 +1,9 @@
-﻿
+﻿@model CheckoutViewModel
+@{
+    ViewData["Title"] = "Checkout";
+}
+
+
 @{
     ViewData["Title"] = "Checkout";
 }
@@ -10,7 +15,7 @@
     <div class="container container_boxed">
         <div class="checkout_form">
             <h2 class="form_title text-uppercase wow fadeInUp" data-wow-delay=".1s">Select payment Method</h2>
-            <form action="#">
+            <form action="#" method="post">
                 <ul class="checkout_steps_nav ul_li wow fadeInUp" data-wow-delay=".2s">
                     <li class="active"><a href="checkout.html">Derect Bank Transfer</a></li>
                     <li><a href="checkout_step2.html">Check Payments</a></li>
@@ -22,35 +27,35 @@
                     <div class="col-lg-4">
                         <div class="form_item">
                             <h4 class="form_field_title">First Name<sup>*</sup></h4>
-                            <input type="text" name="firstname" placeholder="First Name">
+                            <input asp-for="FirstName" type="text" name="firstname" placeholder="First Name">
                         </div>
                     </div>
 
                     <div class="col-lg-4">
                         <div class="form_item">
                             <h4 class="form_field_title">Last Name<sup>*</sup></h4>
-                            <input type="text" name="lastname" placeholder="Last Name">
+                            <input  asp-for="LastName" type="text" name="lastname" placeholder="Last Name">
                         </div>
                     </div>
 
                     <div class="col-lg-4">
                         <div class="form_item">
                             <h4 class="form_field_title">Number<sup>*</sup></h4>
-                            <input type="tel" name="telephone" placeholder="Number">
+                            <input  asp-for="Number" type="tel" name="telephone" placeholder="Number">
                         </div>
                     </div>
 
                     <div class="col-lg-6">
                         <div class="form_item">
                             <h4 class="form_field_title">Own Adress<sup>*</sup></h4>
-                            <input type="text" name="adress" placeholder="Own Adress">
+                            <input  asp-for="OwnAdress" type="text" name="adress" placeholder="Own Adress">
                         </div>
                     </div>
 
                     <div class="col-lg-6">
                         <div class="form_item">
                             <h4 class="form_field_title">Mail Address<sup>*</sup></h4>
-                            <input type="email" name="email" placeholder="Mail Address">
+                            <input  asp-for="Email" type="email" name="email" placeholder="Mail Address">
                         </div>
                     </div>
                 </div>
@@ -60,11 +65,14 @@
                     <textarea name="message" placeholder="Note about your order, Special note for delevery !"></textarea>
                 </div>
             </form>
+
             <div class="checkout_form_footer wow fadeInUp" data-wow-delay=".5s">
-                <span class="total_price"><strong>Total</strong> $255</span>
-                <a class="btn btn_primary text-uppercase" href="checkout_step2.html">Place Order</a>
+                <span class="total_price"><strong>Total</strong>@Model.basket.Product.Price$</span>
+                <button type="submit" class="btn btn_primary text-uppercase" href="checkout_step2.html">Place Order</button>
             </div>
+
+
         </div>
     </div>
 </section>
-<!-- cart_section - end
+<!-- cart_section - end -->

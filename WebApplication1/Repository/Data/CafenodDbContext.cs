@@ -16,6 +16,9 @@ namespace Repository.Data
         public DbSet<Basket> Baskets { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Menu> Menus { get; set; }
+        public DbSet<Checkout> Checkouts { get; set; }
+        public DbSet<ReserveForm> ReserveForms { get; set; }
+        public DbSet<ReserveTable> ReserveTables { get; set; }
 
     }
 }
