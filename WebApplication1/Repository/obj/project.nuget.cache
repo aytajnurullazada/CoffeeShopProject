@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "NkL1SVQqsAjcxxFLHljzTBX6NE7UG3KpC+DSd2Ywoi0KQzOT6+dlVPykwSlCj4U1AHXuh2s8+HuvkfsCeLrUrg==",
+  "dgSpecHash": "Iw/0Ey8fg+o7sL8ygHxijRnUUhMMetbo8wLIUf9IT+c0uWS8NQ/wMrIagE7Z/TFMBKnUYSEtj6imG8dk2ySwUg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ASUS\\Desktop\\Final layihesi\\WebApplication1\\Repository\\Repository.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ASUS\\.nuget\\packages\\cryptohelper\\3.0.2\\cryptohelper.3.0.2.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\2.0.1\\microsoft.aspnetcore.cryptography.internal.2.0.1.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\2.0.1\\microsoft.aspnetcore.cryptography.keyderivation.2.0.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",

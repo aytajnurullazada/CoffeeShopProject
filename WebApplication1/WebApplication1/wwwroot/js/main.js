@@ -429,7 +429,7 @@
                     //$(".cartitem").html(res)
                     $(".heading_title span").text(res.count);
                     $(".cart_btn .cart_counter").text(res.count);
-
+                    $(".total_price .span-price").text(res.total + "$");
                 }
             });
         });

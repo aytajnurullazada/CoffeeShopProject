@@ -60,7 +60,7 @@ namespace WebApplication1.Controllers
             Request.Cookies.TryGetValue("token", out string token);
             var basketItem = _basketRepository.GetBasketProductAndToken(id, token);
             if(basketItem == null)
-            {
+            { 
                 Basket basket = new Basket
                 {
                     ProductId = id,
@@ -94,7 +94,7 @@ namespace WebApplication1.Controllers
         public IActionResult Checkout(int id)
         {
             var basket = _basketRepository.GetBasketById(id);
-            if (basket == null) return NotFound();
+            //if (basket == null) return NotFound();
             
             return View();
         }

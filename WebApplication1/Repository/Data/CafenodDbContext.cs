@@ -19,6 +19,7 @@ namespace Repository.Data
         public DbSet<Checkout> Checkouts { get; set; }
         public DbSet<ReserveForm> ReserveForms { get; set; }
         public DbSet<ReserveTable> ReserveTables { get; set; }
+        public DbSet<Admin> Admins { get; set; }
 
     }
 }
