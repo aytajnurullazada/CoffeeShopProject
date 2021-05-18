@@ -13,7 +13,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebApplication1.Libs;
 
 namespace Admin
 {
@@ -30,11 +29,11 @@ namespace Admin
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddMvc(
-                config =>
-                {
-                    config.Filters.Add(new GlobalToken());
-                });
+            //services.AddMvc(
+            //    config =>
+            //    {
+            //        config.Filters.Add(new GlobalToken());
+            //    });
 
             services.AddAutoMapper(typeof(Startup));
 

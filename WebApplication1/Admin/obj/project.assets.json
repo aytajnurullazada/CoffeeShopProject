@@ -2638,25 +2638,6 @@
         "runtime": {
           "bin/placeholder/Repository.dll": {}
         }
-      },
-      "WebApplication1/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "AutoMapper": "10.1.1",
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.5",
-          "Repository": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/WebApplication1.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/WebApplication1.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
       }
     }
   },
@@ -8674,18 +8655,14 @@
       "type": "project",
       "path": "../Repository/Repository.csproj",
       "msbuildProject": "../Repository/Repository.csproj"
-    },
-    "WebApplication1/1.0.0": {
-      "type": "project",
-      "path": "../WebApplication1/WebApplication1.csproj",
-      "msbuildProject": "../WebApplication1/WebApplication1.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "AutoMapper >= 10.1.1",
+      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.5",
-      "Repository >= 1.0.0",
-      "WebApplication1 >= 1.0.0"
+      "Repository >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8717,9 +8694,6 @@
           "projectReferences": {
             "C:\\Users\\ASUS\\Desktop\\Final layihesi\\WebApplication1\\Repository\\Repository.csproj": {
               "projectPath": "C:\\Users\\ASUS\\Desktop\\Final layihesi\\WebApplication1\\Repository\\Repository.csproj"
-            },
-            "C:\\Users\\ASUS\\Desktop\\Final layihesi\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {
-              "projectPath": "C:\\Users\\ASUS\\Desktop\\Final layihesi\\WebApplication1\\WebApplication1\\WebApplication1.csproj"
             }
           }
         }
@@ -8734,6 +8708,14 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[10.1.1, )"
+          },
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+            "target": "Package",
+            "version": "[8.1.1, )"
+          },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[3.1.5, )"

@@ -16,7 +16,7 @@ namespace Repository.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.5")
+                .HasAnnotation("ProductVersion", "5.0.6")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("Repository.Models.Admin", b =>
@@ -107,8 +107,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProductId")
-                        .IsUnique();
+                    b.HasIndex("ProductId");
 
                     b.ToTable("Baskets");
                 });
@@ -311,9 +310,6 @@ namespace Repository.Migrations
                     b.Property<DateTime>("AddedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("BasketCount")
-                        .HasColumnType("int");
-
                     b.Property<int>("Count")
                         .HasColumnType("int");
 
@@ -498,8 +494,8 @@ namespace Repository.Migrations
             modelBuilder.Entity("Repository.Models.Basket", b =>
                 {
                     b.HasOne("Repository.Models.Product", "Product")
-                        .WithOne("Basket")
-                        .HasForeignKey("Repository.Models.Basket", "ProductId")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -540,11 +536,6 @@ namespace Repository.Migrations
             modelBuilder.Entity("Repository.Models.Category", b =>
                 {
                     b.Navigation("Menu");
-                });
-
-            modelBuilder.Entity("Repository.Models.Product", b =>
-                {
-                    b.Navigation("Basket");
                 });
 #pragma warning restore 612, 618
         }

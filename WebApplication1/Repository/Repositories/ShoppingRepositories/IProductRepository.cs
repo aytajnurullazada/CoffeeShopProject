@@ -12,6 +12,10 @@ namespace Repository.Repositories.ShoppingRepositories
         IEnumerable<Product> GetProductForSale();
         Product GetProductDetails(int Id);
         IEnumerable<Product> GetRelatedProduct(int limit);
-        
+        IEnumerable<Product> GetProducts();
+        Product CreateProduct(Product product);
+        Product GetProductById(int id);
+        void UpdateProduct(Product productToUpdate, Product product);
+        void DeleteProduct(Product product);
     }
 }

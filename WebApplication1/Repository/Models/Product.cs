@@ -22,8 +22,7 @@ namespace Repository.Models
         public byte StarCount { get; set; }
         public Department Department { get; set; }
         public string Image { get; set; }
-        public Basket Basket { get; set; }
-        public int BasketCount { get; set; }
+        
 
     }
 }

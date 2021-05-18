@@ -33,8 +33,22 @@ using Admin.Models.Account;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\Admin\Views\_ViewImports.cshtml"
+using Admin.Models.Shopping;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\ASUS\Desktop\Final layihesi\WebApplication1\Admin\Views\_ViewImports.cshtml"
+using Admin.Models.Menu;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0f2e0dc081c4369a6c764672339ba97763a94bf2", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2b00f0444652e04409c0f41b57177442f6154d61", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
